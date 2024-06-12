@@ -38,7 +38,7 @@ export default function Navigation() {
         <NavbarBrand>
           <AcmeLogo />
           <p className="font-bold text-inherit">
-            <a href="/">Course App</a>
+            <a href="/">Facil de usar</a>
           </p>
         </NavbarBrand>
       </NavbarContent>

@@ -9,8 +9,8 @@ body {
 }
 
 .video-container {
-    width: 100%;
-    max-width: 800px;
+    width: 100px;
+    max-width: 100px;
     margin-top: 20px;
     position: relative;
 }

@@ -49,7 +49,7 @@ function Page() {
     formData.append("description", videoDescription);
 
     try {
-      const response = await fetch("/api/upload", {
+      const response = await fetch("/api/upload/route", {
         method: "POST",
         body: formData,
       });

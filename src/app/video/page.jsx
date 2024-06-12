@@ -9,15 +9,12 @@ function VideoView() {
       <body>
         <Navigation />
 
-        <div class="video-container">
-          <video id="videoView" width="100%" controls>
-            <source src="videos/sample_video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <button id="buttonPlayPause">Play/Pause</button>
+        <div >
+        <iframe width="400" height="200" src="https://www.youtube.com/embed/yaGE5nh0V3E" title="Como usar ChatGPT para ser más productivo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+        
 
-        <div class="controls">
+        <div class="controls">  
           <button id="buttonLike">Like</button>
           <button id="buttonDislike">Dislike</button>
           <button id="buttonSave">Save</button>
