@@ -16,7 +16,10 @@
     "@nextui-org/theme": "^2.2.0",
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/supabase-js": "^2.42.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "framer-motion": "^11.1.1",
+    "multer": "^1.4.5-lts.1",
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18"

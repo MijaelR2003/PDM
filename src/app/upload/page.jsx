@@ -34,13 +34,37 @@ function Page() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Aquí puedes añadir la lógica para subir el video y la miniatura al servidor
+    if (!videoFile || !thumbnailFile) {
+      setUploadStatus("Por favor selecciona tanto un video como una miniatura.");
+      return;
+    }
+
     setUploadStatus("Subiendo...");
 
-    // Simulación de subida
-    setTimeout(() => {
-      setUploadStatus("Video subido con éxito");
-    }, 2000);
+    // Crear un objeto FormData y añadir archivos
+    const formData = new FormData();
+    formData.append("videoFile", videoFile);
+    formData.append("thumbnailFile", thumbnailFile);
+    formData.append("title", videoTitle);
+    formData.append("description", videoDescription);
+
+    try {
+      const response = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setUploadStatus(`Video subido con éxito: ${data.files.videoFile[0].filename}`);
+      } else {
+        const errorData = await response.json();
+        setUploadStatus(`Error al subir el video: ${errorData.message}`);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setUploadStatus("Error al subir el video.");
+    }
   };
 
   return (
