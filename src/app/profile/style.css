@@ -1,0 +1,138 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: 600px) {
+  body {
+  }
+
+  .padre {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cuerpo {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .perfil {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(78, 77, 77);
+    border-radius: 3%;
+  }
+
+  .foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+  }
+
+  #perfil {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nombre {
+    width: 70%;
+  }
+
+  .nombre h1 {
+    text-align: center;
+    margin: 0px;
+  }
+
+  .descripcion {
+    margin: 5px;
+  }
+
+  .botones_container {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .botones {
+    width: 30%;
+    height: 40%;
+    background-color: rgb(143, 143, 143);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+  }
+
+  .videos {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(0, 0, 0);
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 0px 5px;
+  }
+
+  .video {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .ver {
+    background-color: black;
+    width: 40%;
+    height: 100%;
+  }
+
+  .vinombre {
+    background-color: rgb(175, 175, 175);
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0% 15px;
+  }
+}

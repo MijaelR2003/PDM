@@ -8,10 +8,9 @@ import LoginForm from "../components/Login/Login";
 export default function Login() {
   return (
     <>
-      <div>Inicia sesión aqui</div>
+      {/* <div>Inicia sesión aqui</div> */}
       <LoginForm>
         <AuthButtonServer />
-        
       </LoginForm>
     </>
   );

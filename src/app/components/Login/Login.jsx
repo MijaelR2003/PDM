@@ -43,7 +43,7 @@ function LoginForm({ children }) {
   return (
     <div className="container mx-auto">
       <p as="h2" size="lg">
-        Iniciar sesión
+        {/* Iniciar sesión */}
       </p>
 
       <main className="max-w-sm mx-auto">

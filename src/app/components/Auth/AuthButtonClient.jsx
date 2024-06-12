@@ -15,6 +15,8 @@ function AuthButton({ session }) {
       provider: "github",
       options: {
         redirectTo: "http://localhost:3000/auth/callback",
+        // redirectTo: "/auth/callback",
+        // redirectTo: "https://sk4x3l9t-3000.brs.devtunnels.ms/auth/callback",
       },
     });
   };

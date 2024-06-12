@@ -16,7 +16,12 @@ import { AcmeLogo } from "@/app/components/Logos/AcmeLogo";
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = ["Home", "Perfil", "Configuración", "Cerrar sesión"];
+  const menuItems = [
+    { name: "Home", href: "/" },
+    { name: "Perfil", href: "/profile" },
+    { name: "Configuración", href: "#" },
+    { name: "Cerrar sesión", href: "/logout" },
+  ];
 
   return (
     <Navbar
@@ -32,7 +37,9 @@ export default function Navigation() {
         />
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold text-inherit">Course App</p>
+          <p className="font-bold text-inherit">
+            <a href="/">Course App</a>
+          </p>
         </NavbarBrand>
       </NavbarContent>
 
@@ -58,8 +65,8 @@ export default function Navigation() {
           <Link href="#">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+          <Button as={Link} color="primary" href="/upload" variant="flat">
+            Subir video
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -75,10 +82,10 @@ export default function Navigation() {
                   : "foreground"
               }
               className="w-full"
-              href="#"
+              href={item.href}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
